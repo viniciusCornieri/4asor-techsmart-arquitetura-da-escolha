@@ -1,0 +1,1048 @@
+{
+  "configuration" : { },
+  "description" : "E-commerce integrado com DREX",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-02-15T13:11:00Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Cliente que faz compras na TechSmart",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Cliente",
+      "properties" : {
+        "structurizr.dsl.identifier" : "cliente"
+      },
+      "relationships" : [ {
+        "description" : "Faz compras usando DREX",
+        "destinationId" : "3",
+        "id" : "44",
+        "properties" : {
+          "structurizr.dsl.identifier" : "8ffb3498-a23f-48ef-b7dc-33607d9938ba"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Faz compras usando DREX",
+        "destinationId" : "2",
+        "id" : "45",
+        "linkedRelationshipId" : "44",
+        "sourceId" : "1"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "description" : "Controla entrada das requisições externas",
+        "documentation" : { },
+        "id" : "3",
+        "name" : "API Gateway",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.apigateway"
+        },
+        "relationships" : [ {
+          "description" : "Redireciona fluxo",
+          "destinationId" : "4",
+          "id" : "50",
+          "properties" : {
+            "structurizr.dsl.identifier" : "74a2ccbd-eabb-4a6f-8280-e2dde54067cf"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Redireciona fluxo",
+          "destinationId" : "5",
+          "id" : "51",
+          "properties" : {
+            "structurizr.dsl.identifier" : "74920d44-b8a9-428b-9322-764f0d75c5e2"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "group" : "frontend",
+        "id" : "4",
+        "name" : "Web frontend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.web"
+        },
+        "relationships" : [ {
+          "description" : "Faz requisições",
+          "destinationId" : "6",
+          "id" : "52",
+          "properties" : {
+            "structurizr.dsl.identifier" : "80f66fae-50d5-4ee2-b87e-a86b32ed9b1f"
+          },
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Web"
+      }, {
+        "documentation" : { },
+        "group" : "frontend",
+        "id" : "5",
+        "name" : "BFF",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.bff"
+        },
+        "relationships" : [ {
+          "description" : "Faz requisições",
+          "destinationId" : "6",
+          "id" : "53",
+          "properties" : {
+            "structurizr.dsl.identifier" : "23f0c93e-92d6-4271-b334-8981c9c434c5"
+          },
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "description" : "Gerenciador de Apis",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "API Management",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.apimanagement"
+        },
+        "relationships" : [ {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "7",
+          "id" : "54",
+          "properties" : {
+            "structurizr.dsl.identifier" : "2da6526f-ad8c-4b2a-985f-52ee02a1d9b2"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "8",
+          "id" : "55",
+          "properties" : {
+            "structurizr.dsl.identifier" : "7392c23d-855c-46e9-a096-3d64397afc0d"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "9",
+          "id" : "56",
+          "properties" : {
+            "structurizr.dsl.identifier" : "fb36e550-c26c-4161-a761-1c8f0a49481f"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "10",
+          "id" : "57",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ea2e791e-5e6f-4990-a3fb-acd42941cffe"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "11",
+          "id" : "58",
+          "properties" : {
+            "structurizr.dsl.identifier" : "9fd7c762-3c06-4704-8d1c-eae54bb2b817"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "13",
+          "id" : "59",
+          "properties" : {
+            "structurizr.dsl.identifier" : "f385294d-6ff3-416f-8a27-f8879273a649"
+          },
+          "sourceId" : "6",
+          "tags" : "Relationship",
+          "technology" : "REST"
+        }, {
+          "description" : "Balanceia e gerencia APIS",
+          "destinationId" : "12",
+          "id" : "60",
+          "linkedRelationshipId" : "59",
+          "sourceId" : "6",
+          "technology" : "REST"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "group" : "services",
+        "id" : "7",
+        "name" : "API Cadastro de Clientes",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.cadastrocliente"
+        },
+        "relationships" : [ {
+          "description" : "Persiste dados",
+          "destinationId" : "38",
+          "id" : "61",
+          "properties" : {
+            "structurizr.dsl.identifier" : "f85d080d-bb73-4512-81c5-785e88470ff4"
+          },
+          "sourceId" : "7",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "documentation" : { },
+        "group" : "services",
+        "id" : "8",
+        "name" : "API Cadastro de Produtos",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.cadastroprodutos"
+        },
+        "relationships" : [ {
+          "description" : "Persiste dados",
+          "destinationId" : "38",
+          "id" : "62",
+          "properties" : {
+            "structurizr.dsl.identifier" : "91b029b0-1384-4680-948f-b1ae34ef2f8c"
+          },
+          "sourceId" : "8",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "documentation" : { },
+        "group" : "services",
+        "id" : "9",
+        "name" : "API Configuracoes",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.configuracoes"
+        },
+        "relationships" : [ {
+          "description" : "Persiste dados",
+          "destinationId" : "38",
+          "id" : "63",
+          "properties" : {
+            "structurizr.dsl.identifier" : "2bf228ce-72b5-4122-b41f-cfea98a150fb"
+          },
+          "sourceId" : "9",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "documentation" : { },
+        "group" : "services",
+        "id" : "10",
+        "name" : "API Carrinho de compras",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.carrinhodecompras"
+        },
+        "relationships" : [ {
+          "description" : "Persiste dados",
+          "destinationId" : "40",
+          "id" : "64",
+          "properties" : {
+            "structurizr.dsl.identifier" : "cabcbc8a-1379-47c8-994f-b5e9018e51b6"
+          },
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "documentation" : { },
+        "group" : "services",
+        "id" : "11",
+        "name" : "API Compras realizadas",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.comprasrealizadas"
+        },
+        "relationships" : [ {
+          "description" : "Persiste dados",
+          "destinationId" : "39",
+          "id" : "65",
+          "properties" : {
+            "structurizr.dsl.identifier" : "8f6f09e4-63c5-4854-8d4c-4a88717219ae"
+          },
+          "sourceId" : "11",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "components" : [ {
+          "description" : "Controlador REST para operações de pagamento",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Payment Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.paymentcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Inicia processamento",
+            "destinationId" : "18",
+            "id" : "26",
+            "properties" : {
+              "structurizr.dsl.identifier" : "35c6713d-a846-4fe0-b2ac-b4a69bb193b5"
+            },
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component,Controller"
+        }, {
+          "description" : "Processa pagamentos específicos em DREX",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "DREX Processor",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.drexprocessor"
+          },
+          "relationships" : [ {
+            "description" : "Interage com interface DREX",
+            "destinationId" : "22",
+            "id" : "34",
+            "properties" : {
+              "structurizr.dsl.identifier" : "aac1bc9f-c8ce-4a43-ab51-8779cf1bf29b"
+            },
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Processa pagamentos específicos em cartões de Crédito",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Credit Processor",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.creditprocessor"
+          },
+          "relationships" : [ {
+            "description" : "Interage com interface de cartão de crédito",
+            "destinationId" : "23",
+            "id" : "35",
+            "properties" : {
+              "structurizr.dsl.identifier" : "b4223631-4496-4dcc-8727-f25de6d9a0c5"
+            },
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Processa pagamentos específicos em cartões de Débito",
+          "documentation" : { },
+          "id" : "16",
+          "name" : "Debit Processor",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.debitprocessor"
+          },
+          "relationships" : [ {
+            "description" : "Interage com de cartão de débito",
+            "destinationId" : "24",
+            "id" : "36",
+            "properties" : {
+              "structurizr.dsl.identifier" : "4945d6c5-1510-43fd-9b0a-c12e9c98b34d"
+            },
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Processa pagamentos específicos em PIX",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "PIX Processor",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.pixprocessor"
+          },
+          "relationships" : [ {
+            "description" : "Interage com iterface de PIX",
+            "destinationId" : "25",
+            "id" : "37",
+            "properties" : {
+              "structurizr.dsl.identifier" : "f1240584-bfd5-4d41-b66f-27a8bf5c9d0b"
+            },
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Orquestra o fluxo de pagamento",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Payment Orchestrator",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.paymentorchestrator"
+          },
+          "relationships" : [ {
+            "description" : "Processa DREX",
+            "destinationId" : "14",
+            "id" : "28",
+            "properties" : {
+              "structurizr.dsl.identifier" : "53864759-e77d-4405-91d5-5575141760d2"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Converte valores",
+            "destinationId" : "19",
+            "id" : "29",
+            "properties" : {
+              "structurizr.dsl.identifier" : "de7d4d27-69ca-4ccb-9827-df85daf7d65b"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Gerencia transação",
+            "destinationId" : "20",
+            "id" : "30",
+            "properties" : {
+              "structurizr.dsl.identifier" : "f23ac37d-90ae-4ed5-b4cc-1738fe1f0f2d"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Processa pagamentos em cartão de crédito",
+            "destinationId" : "15",
+            "id" : "31",
+            "properties" : {
+              "structurizr.dsl.identifier" : "a02ba2bc-1bb5-4b91-9dfa-c30d684f69a2"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Processa pagamentos em cartão de débito",
+            "destinationId" : "16",
+            "id" : "32",
+            "properties" : {
+              "structurizr.dsl.identifier" : "82689220-7e54-407f-8f24-b2fcef7a9374"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Processa pagamentos em PIX",
+            "destinationId" : "17",
+            "id" : "33",
+            "properties" : {
+              "structurizr.dsl.identifier" : "53640cc8-09b8-4989-a6b6-18d0fff0ddaf"
+            },
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Converte valores entre DREX e Real",
+          "documentation" : { },
+          "id" : "19",
+          "name" : "DREX Converter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.drexconverter"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Gerencia transações e retry",
+          "documentation" : { },
+          "id" : "20",
+          "name" : "Transaction Manager",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.transactionmanager"
+          },
+          "relationships" : [ {
+            "description" : "Persiste dados",
+            "destinationId" : "21",
+            "id" : "27",
+            "properties" : {
+              "structurizr.dsl.identifier" : "6d403004-7132-4944-a7fc-9cc8c941e40b"
+            },
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Acessa dados de pagamento",
+          "documentation" : { },
+          "id" : "21",
+          "name" : "Payment Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.paymentrepository"
+          },
+          "relationships" : [ {
+            "description" : "Persiste dados",
+            "destinationId" : "39",
+            "id" : "66",
+            "properties" : {
+              "structurizr.dsl.identifier" : "2c7e0bfa-b26b-40ce-8407-99bf0a8c1ebf"
+            },
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Persiste/Consulta dados",
+            "destinationId" : "40",
+            "id" : "68",
+            "properties" : {
+              "structurizr.dsl.identifier" : "880c14fa-13f3-443a-b8a8-0bfc062722f3"
+            },
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Interface com blockchain DREX",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "DREX Blockchain Adapter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.drexblockchainadapter"
+          },
+          "relationships" : [ {
+            "description" : "Interface com sistema TeF",
+            "destinationId" : "41",
+            "id" : "73",
+            "properties" : {
+              "structurizr.dsl.identifier" : "c3be9d46-b297-4fe6-95b0-4cbde75959a4"
+            },
+            "sourceId" : "22",
+            "tags" : "Relationship",
+            "technology" : "HTTPS/REST"
+          } ],
+          "tags" : "Element,Component,Adapter"
+        }, {
+          "description" : "Interface para cartões de crédito",
+          "documentation" : { },
+          "id" : "23",
+          "name" : "Credit card Adapter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.creditcardadapter"
+          },
+          "relationships" : [ {
+            "description" : "Interface com sistema TeF",
+            "destinationId" : "41",
+            "id" : "70",
+            "properties" : {
+              "structurizr.dsl.identifier" : "eaa50c8e-28d9-454a-98d9-a43bc40ed1d1"
+            },
+            "sourceId" : "23",
+            "tags" : "Relationship",
+            "technology" : "HTTPS/REST"
+          } ],
+          "tags" : "Element,Component,Adapter"
+        }, {
+          "description" : "Interface para cartões de débito",
+          "documentation" : { },
+          "id" : "24",
+          "name" : "Debit card Adapter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.debitcardadapter"
+          },
+          "relationships" : [ {
+            "description" : "Interface com sistema TeF",
+            "destinationId" : "41",
+            "id" : "71",
+            "properties" : {
+              "structurizr.dsl.identifier" : "5c06d881-4935-4a15-90a8-43c51bb6bcb2"
+            },
+            "sourceId" : "24",
+            "tags" : "Relationship",
+            "technology" : "HTTPS/REST"
+          } ],
+          "tags" : "Element,Component,Adapter"
+        }, {
+          "description" : "Interface para Pix",
+          "documentation" : { },
+          "id" : "25",
+          "name" : "Pix Adapter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techsmart.pagamentos.pixadapter"
+          },
+          "relationships" : [ {
+            "description" : "Interface com sistema TeF",
+            "destinationId" : "41",
+            "id" : "72",
+            "properties" : {
+              "structurizr.dsl.identifier" : "e9aab608-fd87-440b-aa1f-4b87c1ad6f62"
+            },
+            "sourceId" : "25",
+            "tags" : "Relationship",
+            "technology" : "HTTPS/REST"
+          } ],
+          "tags" : "Element,Component,Adapter"
+        } ],
+        "documentation" : { },
+        "group" : "services",
+        "id" : "12",
+        "name" : "API de Pagamentos",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.pagamentos"
+        },
+        "relationships" : [ {
+          "description" : "Solicita transações financeiras",
+          "destinationId" : "41",
+          "id" : "46",
+          "properties" : {
+            "structurizr.dsl.identifier" : "b4aed515-e380-4ea8-8b4d-894c298baf4c"
+          },
+          "sourceId" : "12",
+          "tags" : "Relationship",
+          "technology" : "REST"
+        }, {
+          "description" : "Persiste dados",
+          "destinationId" : "39",
+          "id" : "67",
+          "linkedRelationshipId" : "66",
+          "sourceId" : "12"
+        }, {
+          "description" : "Persiste/Consulta dados",
+          "destinationId" : "40",
+          "id" : "69",
+          "linkedRelationshipId" : "68",
+          "sourceId" : "12"
+        } ],
+        "tags" : "Element,Container,Microservice"
+      }, {
+        "documentation" : { },
+        "group" : "Containers de dados",
+        "id" : "38",
+        "name" : "NoSQL database cadastros",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.nosql"
+        },
+        "tags" : "Element,Container,Database"
+      }, {
+        "documentation" : { },
+        "group" : "Containers de dados",
+        "id" : "39",
+        "name" : "DB Relacional Movimentação de Compras",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.relational"
+        },
+        "tags" : "Element,Container,Database"
+      }, {
+        "documentation" : { },
+        "group" : "Containers de dados",
+        "id" : "40",
+        "name" : "NoSQL Cache Carrinho de Compras",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techsmart.cache"
+        },
+        "tags" : "Element,Container,Database"
+      } ],
+      "description" : "E-commerce integrado com DREX",
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "TechSmart",
+      "properties" : {
+        "structurizr.dsl.identifier" : "techsmart"
+      },
+      "relationships" : [ {
+        "description" : "Solicita transações financeiras",
+        "destinationId" : "41",
+        "id" : "47",
+        "linkedRelationshipId" : "46",
+        "sourceId" : "2",
+        "technology" : "REST"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Fornecedores de interface de comunicação para transações financeiras",
+      "documentation" : { },
+      "id" : "41",
+      "location" : "Unspecified",
+      "name" : "Ambiente TEF",
+      "properties" : {
+        "structurizr.dsl.identifier" : "tef"
+      },
+      "relationships" : [ {
+        "description" : "Faz transações financeiras",
+        "destinationId" : "42",
+        "id" : "48",
+        "properties" : {
+          "structurizr.dsl.identifier" : "1990b196-f7d1-42e7-8960-786f53c4ef80"
+        },
+        "sourceId" : "41",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Faz transações financeiras",
+        "destinationId" : "43",
+        "id" : "49",
+        "properties" : {
+          "structurizr.dsl.identifier" : "57a59343-7632-4483-8dcf-ab8e3bdd71b9"
+        },
+        "sourceId" : "41",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System,External"
+    }, {
+      "documentation" : { },
+      "id" : "42",
+      "location" : "Unspecified",
+      "name" : "Banco Central",
+      "properties" : {
+        "structurizr.dsl.identifier" : "bancocentral"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "documentation" : { },
+      "id" : "43",
+      "location" : "Unspecified",
+      "name" : "Instituições financeiras",
+      "properties" : {
+        "structurizr.dsl.identifier" : "instituicoesfinanceira"
+      },
+      "tags" : "Element,Software System,External"
+    } ]
+  },
+  "name" : "TechSmart",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJUZWNoU21hcnQiICJFLWNvbW1lcmNlIGludGVncmFkbyBjb20gRFJFWCIKCiAgICAhaWRlbnRpZmllcnMgaGllcmFyY2hpY2FsCgogICAgbW9kZWwgewogICAgICAgIGNsaWVudGUgPSBwZXJzb24gIkNsaWVudGUiICJDbGllbnRlIHF1ZSBmYXogY29tcHJhcyBuYSBUZWNoU21hcnQiCgogICAgICAgIHRlY2hTbWFydCA9IHNvZnR3YXJlU3lzdGVtICJUZWNoU21hcnQiICJFLWNvbW1lcmNlIGludGVncmFkbyBjb20gRFJFWCIgewoKICAgICAgICAgICAgYXBpR2F0ZXdheSA9IGNvbnRhaW5lciAiQVBJIEdhdGV3YXkiICJDb250cm9sYSBlbnRyYWRhIGRhcyByZXF1aXNpw6fDtWVzIGV4dGVybmFzIgoKICAgICAgICAgICAgZ3JvdXAgImZyb250ZW5kIiB7CiAgICAgICAgICAgICAgICB3ZWIgPSBjb250YWluZXIgIldlYiBmcm9udGVuZCIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIldlYiIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBiZmYgPSBjb250YWluZXIgIkJGRiIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc2VydmljZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgYXBpTWFuYWdlbWVudCA9IGNvbnRhaW5lciAiQVBJIE1hbmFnZW1lbnQiICJHZXJlbmNpYWRvciBkZSBBcGlzIiB7CgogICAgICAgICAgICB9CgogICAgICAgICAgICBncm91cCAic2VydmljZXMiIHsKICAgICAgICAgICAgICAgIGNhZGFzdHJvQ2xpZW50ZSA9IGNvbnRhaW5lciAiQVBJIENhZGFzdHJvIGRlIENsaWVudGVzIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiTWljcm9zZXJ2aWNlIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGNhZGFzdHJvUHJvZHV0b3MgPSBjb250YWluZXIgIkFQSSBDYWRhc3RybyBkZSBQcm9kdXRvcyIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc2VydmljZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBjb25maWd1cmFjb2VzID0gY29udGFpbmVyICJBUEkgQ29uZmlndXJhY29lcyIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIk1pY3Jvc2VydmljZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBjYXJyaW5ob0RlQ29tcHJhcyA9IGNvbnRhaW5lciAiQVBJIENhcnJpbmhvIGRlIGNvbXByYXMiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJNaWNyb3NlcnZpY2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tcHJhc1JlYWxpemFkYXMgPSBjb250YWluZXIgIkFQSSBDb21wcmFzIHJlYWxpemFkYXMiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJNaWNyb3NlcnZpY2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgcGFnYW1lbnRvcyA9IGNvbnRhaW5lciAiQVBJIGRlIFBhZ2FtZW50b3MiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJNaWNyb3NlcnZpY2UiCgogICAgICAgICAgICAgICAgICAgIHBheW1lbnRDb250cm9sbGVyID0gY29tcG9uZW50ICJQYXltZW50IENvbnRyb2xsZXIiICJDb250cm9sYWRvciBSRVNUIHBhcmEgb3BlcmHDp8O1ZXMgZGUgcGFnYW1lbnRvIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRhZ3MgIkNvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIGRyZXhQcm9jZXNzb3IgPSBjb21wb25lbnQgIkRSRVggUHJvY2Vzc29yIiAiUHJvY2Vzc2EgcGFnYW1lbnRvcyBlc3BlY8OtZmljb3MgZW0gRFJFWCIgCiAgICAgICAgICAgICAgICAgICAgY3JlZGl0UHJvY2Vzc29yID0gY29tcG9uZW50ICJDcmVkaXQgUHJvY2Vzc29yIiAiUHJvY2Vzc2EgcGFnYW1lbnRvcyBlc3BlY8OtZmljb3MgZW0gY2FydMO1ZXMgZGUgQ3LDqWRpdG8iIAogICAgICAgICAgICAgICAgICAgIGRlYml0UHJvY2Vzc29yID0gY29tcG9uZW50ICJEZWJpdCBQcm9jZXNzb3IiICJQcm9jZXNzYSBwYWdhbWVudG9zIGVzcGVjw61maWNvcyBlbSBjYXJ0w7VlcyBkZSBEw6liaXRvIiAKICAgICAgICAgICAgICAgICAgICBwaXhQcm9jZXNzb3IgPSBjb21wb25lbnQgIlBJWCBQcm9jZXNzb3IiICJQcm9jZXNzYSBwYWdhbWVudG9zIGVzcGVjw61maWNvcyBlbSBQSVgiIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIHBheW1lbnRPcmNoZXN0cmF0b3IgPSBjb21wb25lbnQgIlBheW1lbnQgT3JjaGVzdHJhdG9yIiAiT3JxdWVzdHJhIG8gZmx1eG8gZGUgcGFnYW1lbnRvIiAKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBkcmV4Q29udmVydGVyID0gY29tcG9uZW50ICJEUkVYIENvbnZlcnRlciIgIkNvbnZlcnRlIHZhbG9yZXMgZW50cmUgRFJFWCBlIFJlYWwiIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIHRyYW5zYWN0aW9uTWFuYWdlciA9IGNvbXBvbmVudCAiVHJhbnNhY3Rpb24gTWFuYWdlciIgIkdlcmVuY2lhIHRyYW5zYcOnw7VlcyBlIHJldHJ5IiAKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICBwYXltZW50UmVwb3NpdG9yeSA9IGNvbXBvbmVudCAiUGF5bWVudCBSZXBvc2l0b3J5IiAiQWNlc3NhIGRhZG9zIGRlIHBhZ2FtZW50byIgCiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgZHJleEJsb2NrY2hhaW5BZGFwdGVyID0gY29tcG9uZW50ICJEUkVYIEJsb2NrY2hhaW4gQWRhcHRlciIgIkludGVyZmFjZSBjb20gYmxvY2tjaGFpbiBEUkVYIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFkYXB0ZXIiCiAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICBjcmVkaXRDYXJkQWRhcHRlciA9IGNvbXBvbmVudCAiQ3JlZGl0IGNhcmQgQWRhcHRlciIgIkludGVyZmFjZSBwYXJhIGNhcnTDtWVzIGRlIGNyw6lkaXRvIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFkYXB0ZXIiCiAgICAgICAgICAgICAgICAgICAgfQoKCiAgICAgICAgICAgICAgICAgICAgZGViaXRDYXJkQWRhcHRlciA9IGNvbXBvbmVudCAiRGViaXQgY2FyZCBBZGFwdGVyIiAiSW50ZXJmYWNlIHBhcmEgY2FydMO1ZXMgZGUgZMOpYml0byIgewogICAgICAgICAgICAgICAgICAgICAgICB0YWdzICJBZGFwdGVyIgogICAgICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICAgICAgcGl4QWRhcHRlciA9IGNvbXBvbmVudCAiUGl4IEFkYXB0ZXIiICJJbnRlcmZhY2UgcGFyYSBQaXgiIHsKICAgICAgICAgICAgICAgICAgICAgICAgdGFncyAiQWRhcHRlciIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgIyBSZWxhY2lvbmFtZW50b3MgaW50ZXJub3MKICAgICAgICAgICAgICAgICAgICBwYXltZW50Q29udHJvbGxlciAtPiBwYXltZW50T3JjaGVzdHJhdG9yICJJbmljaWEgcHJvY2Vzc2FtZW50byIKICAgICAgICAgICAgICAgICAgICB0cmFuc2FjdGlvbk1hbmFnZXIgLT4gcGF5bWVudFJlcG9zaXRvcnkgIlBlcnNpc3RlIGRhZG9zIgogICAgICAgICAgICAgICAgICAgIHBheW1lbnRPcmNoZXN0cmF0b3IgLT4gZHJleFByb2Nlc3NvciAiUHJvY2Vzc2EgRFJFWCIKICAgICAgICAgICAgICAgICAgICBwYXltZW50T3JjaGVzdHJhdG9yIC0+IGRyZXhDb252ZXJ0ZXIgIkNvbnZlcnRlIHZhbG9yZXMiCiAgICAgICAgICAgICAgICAgICAgcGF5bWVudE9yY2hlc3RyYXRvciAtPiB0cmFuc2FjdGlvbk1hbmFnZXIgIkdlcmVuY2lhIHRyYW5zYcOnw6NvIgogICAgICAgICAgICAgICAgICAgIHBheW1lbnRPcmNoZXN0cmF0b3IgLT4gY3JlZGl0UHJvY2Vzc29yICJQcm9jZXNzYSBwYWdhbWVudG9zIGVtIGNhcnTDo28gZGUgY3LDqWRpdG8iCiAgICAgICAgICAgICAgICAgICAgcGF5bWVudE9yY2hlc3RyYXRvciAtPiBkZWJpdFByb2Nlc3NvciAiUHJvY2Vzc2EgcGFnYW1lbnRvcyBlbSBjYXJ0w6NvIGRlIGTDqWJpdG8iCiAgICAgICAgICAgICAgICAgICAgcGF5bWVudE9yY2hlc3RyYXRvciAtPiBwaXhQcm9jZXNzb3IgIlByb2Nlc3NhIHBhZ2FtZW50b3MgZW0gUElYIgogICAgICAgICAgICAgICAgICAgIGRyZXhQcm9jZXNzb3IgLT4gZHJleEJsb2NrY2hhaW5BZGFwdGVyICJJbnRlcmFnZSBjb20gaW50ZXJmYWNlIERSRVgiCiAgICAgICAgICAgICAgICAgICAgY3JlZGl0UHJvY2Vzc29yIC0+IGNyZWRpdENhcmRBZGFwdGVyICJJbnRlcmFnZSBjb20gaW50ZXJmYWNlIGRlIGNhcnTDo28gZGUgY3LDqWRpdG8iCiAgICAgICAgICAgICAgICAgICAgZGViaXRQcm9jZXNzb3IgLT4gZGViaXRDYXJkQWRhcHRlciAiSW50ZXJhZ2UgY29tIGRlIGNhcnTDo28gZGUgZMOpYml0byIKICAgICAgICAgICAgICAgICAgICBwaXhQcm9jZXNzb3IgLT4gcGl4QWRhcHRlciAiSW50ZXJhZ2UgY29tIGl0ZXJmYWNlIGRlIFBJWCIKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZ3JvdXAgIkNvbnRhaW5lcnMgZGUgZGFkb3MiIHsKICAgICAgICAgICAgICAgIG5vU3FsID0gY29udGFpbmVyICJOb1NRTCBkYXRhYmFzZSBjYWRhc3Ryb3MiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJEYXRhYmFzZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICByZWxhdGlvbmFsID0gY29udGFpbmVyICJEQiBSZWxhY2lvbmFsIE1vdmltZW50YcOnw6NvIGRlIENvbXByYXMiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJEYXRhYmFzZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBjYWNoZSA9IGNvbnRhaW5lciAiTm9TUUwgQ2FjaGUgQ2FycmluaG8gZGUgQ29tcHJhcyIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkRhdGFiYXNlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICB0ZWYgPSBzb2Z0d2FyZVN5c3RlbSAiQW1iaWVudGUgVEVGIiAiRm9ybmVjZWRvcmVzIGRlIGludGVyZmFjZSBkZSBjb211bmljYcOnw6NvIHBhcmEgdHJhbnNhw6fDtWVzIGZpbmFuY2VpcmFzIiB7CiAgICAgICAgICAgIHRhZ3MgIkV4dGVybmFsIgogICAgICAgIH0KCiAgICAgICAgYmFuY29DZW50cmFsID0gc29mdHdhcmVTeXN0ZW0gIkJhbmNvIENlbnRyYWwiIHsKICAgICAgICAgICAgdGFncyAiRXh0ZXJuYWwiCiAgICAgICAgfQoKICAgICAgICBpbnN0aXR1aWNvZXNGaW5hbmNlaXJhID0gc29mdHdhcmVTeXN0ZW0gIkluc3RpdHVpw6fDtWVzIGZpbmFuY2VpcmFzIiB7CiAgICAgICAgICAgIHRhZ3MgIkV4dGVybmFsIgogICAgICAgIH0KCiAgICAgICAgI1JlbGFjaW9uYW1lbnRvcyBleHRlcm5vcwoKICAgICAgICBjbGllbnRlIC0+IHRlY2hTbWFydC5hcGlHYXRld2F5ICJGYXogY29tcHJhcyB1c2FuZG8gRFJFWCIKICAgICAgICB0ZWNoU21hcnQucGFnYW1lbnRvcyAtPiB0ZWYgIlNvbGljaXRhIHRyYW5zYcOnw7VlcyBmaW5hbmNlaXJhcyIgIlJFU1QiCiAgICAgICAgdGVmIC0+IGJhbmNvQ2VudHJhbCAiRmF6IHRyYW5zYcOnw7VlcyBmaW5hbmNlaXJhcyIKICAgICAgICB0ZWYgLT4gaW5zdGl0dWljb2VzRmluYW5jZWlyYSAiRmF6IHRyYW5zYcOnw7VlcyBmaW5hbmNlaXJhcyIKCiAgICAgICAgdGVjaFNtYXJ0LmFwaUdhdGV3YXkgLT4gdGVjaFNtYXJ0LndlYiAiUmVkaXJlY2lvbmEgZmx1eG8iCiAgICAgICAgdGVjaFNtYXJ0LmFwaUdhdGV3YXkgLT4gdGVjaFNtYXJ0LmJmZiAiUmVkaXJlY2lvbmEgZmx1eG8iCgogICAgICAgIHRlY2hTbWFydC53ZWIgLT4gdGVjaFNtYXJ0LmFwaU1hbmFnZW1lbnQgIkZheiByZXF1aXNpw6fDtWVzIgogICAgICAgIHRlY2hTbWFydC5iZmYgLT4gdGVjaFNtYXJ0LmFwaU1hbmFnZW1lbnQgIkZheiByZXF1aXNpw6fDtWVzIgoKICAgICAgICB0ZWNoU21hcnQuYXBpTWFuYWdlbWVudCAtPiB0ZWNoU21hcnQuY2FkYXN0cm9DbGllbnRlICJCYWxhbmNlaWEgZSBnZXJlbmNpYSBBUElTIgogICAgICAgIHRlY2hTbWFydC5hcGlNYW5hZ2VtZW50IC0+IHRlY2hTbWFydC5jYWRhc3Ryb1Byb2R1dG9zICJCYWxhbmNlaWEgZSBnZXJlbmNpYSBBUElTIgogICAgICAgIHRlY2hTbWFydC5hcGlNYW5hZ2VtZW50IC0+IHRlY2hTbWFydC5jb25maWd1cmFjb2VzICJCYWxhbmNlaWEgZSBnZXJlbmNpYSBBUElTIgogICAgICAgIHRlY2hTbWFydC5hcGlNYW5hZ2VtZW50IC0+IHRlY2hTbWFydC5jYXJyaW5ob0RlQ29tcHJhcyAiQmFsYW5jZWlhIGUgZ2VyZW5jaWEgQVBJUyIKICAgICAgICB0ZWNoU21hcnQuYXBpTWFuYWdlbWVudCAtPiB0ZWNoU21hcnQuY29tcHJhc1JlYWxpemFkYXMgIkJhbGFuY2VpYSBlIGdlcmVuY2lhIEFQSVMiCiAgICAgICAgdGVjaFNtYXJ0LmFwaU1hbmFnZW1lbnQgLT4gdGVjaFNtYXJ0LnBhZ2FtZW50b3MucGF5bWVudENvbnRyb2xsZXIgIkJhbGFuY2VpYSBlIGdlcmVuY2lhIEFQSVMiICJSRVNUIgoKICAgICAgICB0ZWNoU21hcnQuY2FkYXN0cm9DbGllbnRlIC0+IHRlY2hTbWFydC5ub1NxbCAiUGVyc2lzdGUgZGFkb3MiCiAgICAgICAgdGVjaFNtYXJ0LmNhZGFzdHJvUHJvZHV0b3MgLT4gdGVjaFNtYXJ0Lm5vU3FsICJQZXJzaXN0ZSBkYWRvcyIKICAgICAgICB0ZWNoU21hcnQuY29uZmlndXJhY29lcyAtPiB0ZWNoU21hcnQubm9TcWwgIlBlcnNpc3RlIGRhZG9zIgogICAgICAgIHRlY2hTbWFydC5jYXJyaW5ob0RlQ29tcHJhcyAtPiB0ZWNoU21hcnQuY2FjaGUgIlBlcnNpc3RlIGRhZG9zIgogICAgICAgIHRlY2hTbWFydC5jb21wcmFzUmVhbGl6YWRhcyAtPiB0ZWNoU21hcnQucmVsYXRpb25hbCAiUGVyc2lzdGUgZGFkb3MiCiAgICAgICAgdGVjaFNtYXJ0LnBhZ2FtZW50b3MucGF5bWVudFJlcG9zaXRvcnkgLT4gdGVjaFNtYXJ0LnJlbGF0aW9uYWwgIlBlcnNpc3RlIGRhZG9zIgogICAgICAgIHRlY2hTbWFydC5wYWdhbWVudG9zLnBheW1lbnRSZXBvc2l0b3J5IC0+IHRlY2hTbWFydC5jYWNoZSAiUGVyc2lzdGUvQ29uc3VsdGEgZGFkb3MiCgogICAgICAgIHRlY2hTbWFydC5wYWdhbWVudG9zLmNyZWRpdENhcmRBZGFwdGVyIC0+IHRlZiAiSW50ZXJmYWNlIGNvbSBzaXN0ZW1hIFRlRiIgIkhUVFBTL1JFU1QiCiAgICAgICAgdGVjaFNtYXJ0LnBhZ2FtZW50b3MuZGViaXRDYXJkQWRhcHRlciAtPiB0ZWYgIkludGVyZmFjZSBjb20gc2lzdGVtYSBUZUYiICJIVFRQUy9SRVNUIgogICAgICAgIHRlY2hTbWFydC5wYWdhbWVudG9zLnBpeEFkYXB0ZXIgLT4gdGVmICJJbnRlcmZhY2UgY29tIHNpc3RlbWEgVGVGIiAiSFRUUFMvUkVTVCIKICAgICAgICB0ZWNoU21hcnQucGFnYW1lbnRvcy5kcmV4QmxvY2tjaGFpbkFkYXB0ZXIgLT4gdGVmICJJbnRlcmZhY2UgY29tIHNpc3RlbWEgVGVGIiAiSFRUUFMvUkVTVCIKCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgdGVjaFNtYXJ0ICJEaWFncmFtYUMxLUNvbnRleHRvIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKiBiYW5jb0NlbnRyYWwgaW5zdGl0dWljb2VzRmluYW5jZWlyYQogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgdGVjaFNtYXJ0ICJEaWFncmFtYUMyLUNvbnRhaW5lciIgewogICAgICAgICAgICBpbmNsdWRlICogYmFuY29DZW50cmFsIGluc3RpdHVpY29lc0ZpbmFuY2VpcmEKICAgICAgICAgICAgIyBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgdGVjaFNtYXJ0LnBhZ2FtZW50b3MgIkRpYWdyYW1hQzMtQ29tcG9uZW50ZS1wYWdhbWVudG9zIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIkV4dGVybmFsIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4MDgwODAKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIGN5bGluZGVyCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIlF1ZXVlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBwaXBlCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIk1pY3Jvc2VydmljZSIgewogICAgICAgICAgICAgICAgc2hhcGUgSGV4YWdvbgogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJXZWIiIHsKICAgICAgICAgICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiQ29udHJvbGxlciIgewogICAgICAgICAgICAgICAgc2hhcGUgaGV4YWdvbgogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBlbGVtZW50ICJSZXBvc2l0b3J5IiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjN0Q2OUNCCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIGVsZW1lbnQgIkFkYXB0ZXIiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEhleGFnb24KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI0Q2NDI5MgogICAgICAgICAgICB9CgogICAgICAgIH0KICAgIH0KCn0="
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "dimensions" : {
+        "height" : 4180,
+        "width" : 4600
+      },
+      "elements" : [ {
+        "id" : "6",
+        "x" : 200,
+        "y" : 1999
+      }, {
+        "id" : "13",
+        "x" : 950,
+        "y" : 1999
+      }, {
+        "id" : "14",
+        "x" : 2450,
+        "y" : 3499
+      }, {
+        "id" : "15",
+        "x" : 2450,
+        "y" : 2899
+      }, {
+        "id" : "16",
+        "x" : 2450,
+        "y" : 2299
+      }, {
+        "id" : "17",
+        "x" : 2450,
+        "y" : 1699
+      }, {
+        "id" : "18",
+        "x" : 1700,
+        "y" : 1999
+      }, {
+        "id" : "19",
+        "x" : 2450,
+        "y" : 1099
+      }, {
+        "id" : "20",
+        "x" : 2450,
+        "y" : 499
+      }, {
+        "id" : "21",
+        "x" : 3200,
+        "y" : 499
+      }, {
+        "id" : "22",
+        "x" : 3200,
+        "y" : 3499
+      }, {
+        "id" : "23",
+        "x" : 3200,
+        "y" : 2899
+      }, {
+        "id" : "24",
+        "x" : 3200,
+        "y" : 2299
+      }, {
+        "id" : "25",
+        "x" : 3200,
+        "y" : 1699
+      }, {
+        "id" : "39",
+        "x" : 3950,
+        "y" : 199
+      }, {
+        "id" : "40",
+        "x" : 3950,
+        "y" : 799
+      }, {
+        "id" : "41",
+        "x" : 3950,
+        "y" : 2599
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "DiagramaC3-Componente-pagamentos",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "26"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "28",
+        "vertices" : [ {
+          "x" : 2450,
+          "y" : 3349
+        } ]
+      }, {
+        "id" : "29"
+      }, {
+        "id" : "30",
+        "vertices" : [ {
+          "x" : 2450,
+          "y" : 949
+        } ]
+      }, {
+        "id" : "31"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "70"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "72",
+        "vertices" : [ {
+          "x" : 3754,
+          "y" : 2149
+        } ]
+      }, {
+        "id" : "73",
+        "vertices" : [ {
+          "x" : 3754,
+          "y" : 3349
+        } ]
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "DiagramaC3-Componente-pagamentos",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "background" : "#808080",
+          "tag" : "External"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        }, {
+          "shape" : "Pipe",
+          "tag" : "Queue"
+        }, {
+          "shape" : "Hexagon",
+          "tag" : "Microservice"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "Web"
+        }, {
+          "shape" : "Hexagon",
+          "tag" : "Controller"
+        }, {
+          "background" : "#7d69cb",
+          "shape" : "Cylinder",
+          "tag" : "Repository"
+        }, {
+          "background" : "#d64292",
+          "shape" : "Hexagon",
+          "tag" : "Adapter"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "dimensions" : {
+        "height" : 4316,
+        "width" : 5995
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 2495,
+        "y" : 5
+      }, {
+        "id" : "3",
+        "x" : 2470,
+        "y" : 630
+      }, {
+        "id" : "4",
+        "x" : 2885,
+        "y" : 1270
+      }, {
+        "id" : "5",
+        "x" : 2030,
+        "y" : 1225
+      }, {
+        "id" : "6",
+        "x" : 2485,
+        "y" : 1935
+      }, {
+        "id" : "7",
+        "x" : 3458,
+        "y" : 2610
+      }, {
+        "id" : "8",
+        "x" : 4028,
+        "y" : 2610
+      }, {
+        "id" : "9",
+        "x" : 2891,
+        "y" : 2610
+      }, {
+        "id" : "10",
+        "x" : 1757,
+        "y" : 2610
+      }, {
+        "id" : "11",
+        "x" : 2324,
+        "y" : 2610
+      }, {
+        "id" : "12",
+        "x" : 1190,
+        "y" : 2610
+      }, {
+        "id" : "38",
+        "x" : 3480,
+        "y" : 3515
+      }, {
+        "id" : "39",
+        "x" : 2517,
+        "y" : 3515
+      }, {
+        "id" : "40",
+        "x" : 1555,
+        "y" : 3515
+      }, {
+        "id" : "41",
+        "x" : 470,
+        "y" : 2655
+      }, {
+        "id" : "42",
+        "x" : 470,
+        "y" : 3243
+      }, {
+        "id" : "43",
+        "x" : 470,
+        "y" : 2068
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "DiagramaC2-Container",
+      "order" : 2,
+      "paperSize" : "A2_Landscape",
+      "relationships" : [ {
+        "id" : "44"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "69"
+      } ],
+      "softwareSystemId" : "2"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1300,
+        "width" : 3100
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 200,
+        "y" : 499
+      }, {
+        "id" : "2",
+        "x" : 950,
+        "y" : 499
+      }, {
+        "id" : "41",
+        "x" : 1700,
+        "y" : 499
+      }, {
+        "id" : "42",
+        "x" : 2450,
+        "y" : 199
+      }, {
+        "id" : "43",
+        "x" : 2450,
+        "y" : 799
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "DiagramaC1-Contexto",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "45"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      } ],
+      "softwareSystemId" : "2"
+    } ]
+  }
+}
